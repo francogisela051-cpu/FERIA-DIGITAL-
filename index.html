@@ -1,100 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Feria Digital Agropecuaria</title>
-  <link rel="stylesheet" href="estilos.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Feria Digital Agropecuaria</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <style>
+        body {
+            background-image: url("imagenes/cultivos.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .vista {
+            display: none;
+        }
+
+        .vista.activa {
+            display: block;
+        }
+
+        header h1 {
+            color: #FFD700;
+            text-shadow: 2px 2px 5px #000;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        header p {
+            text-align: center;
+            font-size: 1.2em;
+            color: #FFD700;
+            text-shadow: 1px 1px 3px #000;
+            font-weight: bold;
+        }
+
+        .grid-botones {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            max-width: 400px;
+            margin: 30px auto;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #388E3C;
+        }
+
+        .vista h2 {
+            color: #FFD700;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .cultivo-card {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease;
+        }
+
+        .cultivo-card:hover {
+            transform: scale(1.05);
+        }
+
+        .cultivo-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .cultivo-card h3 {
+            color: #FFD700;
+            margin: 10px 0;
+            font-size: 20px;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .cultivo-card p {
+            color: #FF4500;
+            font-size: 14px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .volver {
+            margin-top: 20px;
+            background-color: #FF4500;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .volver:hover {
+            background-color: #E63900;
+        }
+    </style>
 </head>
 
 <body>
-  <header class="header">
-    <h1>Feria Digital Agropecuaria</h1>
-    <p>Explora cultivos, fotos, historias y contáctanos.</p>
-  </header>
+    <header class="header">
+        <h1>Feria Digital Agropecuaria</h1>
+        <p>Explora cultivos, fotos, historias y contáctanos.</p>
+    </header>
 
-  <main class="contenedor">
+    <main class="contenedor">
+        <!-- VISTA PRINCIPAL -->
+        <section id="vista-inicio" class="vista activa">
+            <div class="grid-botones">
+                <button class="btn" data-vista="cultivo">Tipo de cultivo</button>
+                <button class="btn" data-vista="galeria">Galería de fotos</button>
+                <button class="btn" data-vista="historias">Historias</button>
+                <button class="btn" data-vista="contacto">Contacto</button>
+                <button class="btn" data-vista="formulario">Formulario</button>
+            </div>
+        </section>
 
-    <!-- VISTA PRINCIPAL (MENÚ) -->
-    <section id="vista-inicio" class="vista activa">
-      <div class="grid-botones">
-        <button class="btn" data-vista="cultivo">Tipo de cultivo</button>
-        <button class="btn" data-vista="galeria">Galería de fotos</button>
-        <button class="btn" data-vista="historias">Historias</button>
-        <button class="btn btn-principal" data-vista="contacto">Contacto</button>
-      </div>
-    </section>
+        <!-- VISTA: TIPO DE CULTIVO -->
+        <section id="vista-cultivo" class="vista">
+            <h2>Tipo de cultivo</h2>
 
-    <!-- VISTA: TIPO DE CULTIVO -->
-    <section id="vista-cultivo" class="vista">
-      <h2>Tipo de cultivo</h2>
-      <p>Aquí puedes poner información de cultivos (café, plátano, cacao, etc.).</p>
+            <div class="cultivo-card">
+                <img src="https://copilot.microsoft.com/th/id/BCO.8e4033b1-935a-4f5a-9c53-0459467b1e59.png"
+                    alt="Plátano">
+                <h3>🍌 Plátano</h3>
+                <p>El plátano es un cultivo esencial en la alimentación y economía rural, con alto rendimiento y gran
+                    demanda.</p>
+            </div>
 
-      <button class="btn-volver" id="volver-cultivo">← Volver</button>
-    </section>
+            <div class="cultivo-card">
+                <img src="https://copilot.microsoft.com/th/id/BCO.bbda2345-f55f-42bd-b7e5-b23715954f74.png" alt="Maíz">
+                <h3>🌽 Maíz</h3>
+                <p>El maíz es un cereal versátil, base de la dieta y clave en la producción agroindustrial y
+                    alimentaria.</p>
+            </div>
 
-    <!-- VISTA: GALERÍA -->
-    <section id="vista-galeria" class="vista">
-      <h2>Galería de fotos</h2>
-      <p>Fotos de cultivos y productos agrícolas.</p>
+            <div class="cultivo-card">
+                <img src="imagenes/cafe.jpg" alt="Café">
+                <h3>☕ Café</h3>
+                <p>El café colombiano es reconocido mundialmente por su calidad y tradición, sustento de miles de
+                    familias campesinas.</p>
+            </div>
 
-      <div class="galeria">
+            <div class="cultivo-card">
+                <img src="imagenes/frutas.jpg" alt="Frutas">
+                <h3>🍓 Frutas</h3>
+                <p>Las frutas aportan diversidad, nutrición y valor económico, siendo parte vital de la agricultura
+                    sostenible.</p>
+            </div>
 
-        <div class="tarjeta-foto">
-          <img src="imagenes/cultivos.jpg" alt="Cultivos">
-          <p>Cultivos de la región</p>
-        </div>
+            <div class="cultivo-card">
+                <img src="imagenes/cultivos.jpg" alt="Cultivos mixtos">
+                <h3>🌱 Cultivos mixtos</h3>
+                <p>La combinación de diferentes cultivos fortalece la seguridad alimentaria y mejora el aprovechamiento
+                    del suelo.</p>
+            </div>
 
-        <div class="tarjeta-foto">
-          <img src="imagenes/frutas.jpg" alt="Frutas">
-          <p>Frutas frescas</p>
-        </div>
+            <button class="volver" data-vista="inicio">Volver</button>
+        </section>
 
-        <div class="tarjeta-foto">
-          <img src="imagenes/campo.jpg" alt="Campo">
-          <p>Trabajo en el campo</p>
-        </div>
+        <!-- VISTA: GALERÍA -->
+        <section id="vista-galeria" class="vista">
+            <h2>Galería de fotos</h2>
+            <p>Aquí puedes ver imágenes de cultivos y frutas.</p>
+            <img src="imagenes/cultivos.jpg" alt="Cultivos">
+            <img src="imagenes/frutas.jpg" alt="Frutas">
+            <img src="imagenes/cafe.jpg" alt="Cafe">
+            <button class="volver" data-vista="inicio">Volver</button>
+        </section>
 
-      </div>
+        <!-- VISTA: HISTORIAS -->
+        <section id="vista-historias" class="vista">
+            <h2>Historias</h2>
+            <p>Todos nuestros cultivos son sembrados con mucho amor por manos de nuestros agricultores.</p>
+            <button class="volver" data-vista="inicio">Volver</button>
+        </section>
 
-      <button class="btn-volver" id="volver-galeria">← Volver</button>
-    </section>
+        <!-- VISTA: CONTACTO -->
+        <section id="vista-contacto" class="vista">
+            <h2>Contacto</h2>
+            <p>Correo: feria@agro.com</p>
+            <p>Teléfono: 321 612 97 52</p>
+            <button class="volver" data-vista="inicio">Volver</button>
+        </section>
 
-    <!-- VISTA: HISTORIAS -->
-    <section id="vista-historias" class="vista">
-      <h2>Historias</h2>
-      <p>Cuenta historias de la vereda, productores, buenas prácticas, etc.</p>
+        <!-- VISTA: FORMULARIO -->
+        <section id="vista-formulario" class="vista">
+            <h2>Formulario de registro</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+                </div>
 
-      <button class="btn-volver" id="volver-historias">← Volver</button>
-    </section>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono">
+                </div>
 
-    <!-- VISTA: CONTACTO -->
-    <section id="vista-contacto" class="vista">
-      <h2>Contacto</h2>
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Escribe tu correo">
+                </div>
 
-      <div class="tarjeta">
-        <p><strong>Nombre:</strong> Tu Nombre Aquí</p>
-        <p><strong>Correo:</strong> tucorreo@email.com</p>
-        <p><strong>Celular:</strong> +57 300 000 0000</p>
-        <p><strong>Ubicación:</strong> Medellín, Colombia</p>
-      </div>
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+            <button class="volver" data-vista="inicio">Volver</button>
+        </section>
 
-      <div class="acciones">
-        <a class="btn-link" href="mailto:tucorreo@email.com">Enviar correo</a>
-        <a class="btn-link" href="https://wa.me/573000000000" target="_blank">WhatsApp</a>
-      </div>
 
-      <button class="btn-volver" id="volver-contacto">← Volver</button>
-    </section>
 
-  </main>
 
-  <footer class="footer">
-    <small>© Feria Digital Agropecuaria</small>
-  </footer>
 
-  <script src="funciones.js"></script>
+        <script>
+            // Lógica para cambiar vistas
+            const botones = document.querySelectorAll(".btn, .volver");
+            botones.forEach(boton => {
+                boton.addEventListener("click", () => {
+                    const vistaId = boton.getAttribute("data-vista");
+                    document.querySelectorAll(".vista").forEach(v => v.classList.remove("activa"));
+                    const vista = document.getElementById("vista-" + vistaId);
+                    if (vista) vista.classList.add("activa");
+                });
+            });
+        </script>
 </body>
 
 </html>
