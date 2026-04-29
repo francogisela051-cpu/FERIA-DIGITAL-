@@ -15,6 +15,12 @@
   text-shadow: 2px 2px 5px #000;
 }
 
+input,
+textarea {
+  color: #000000;
+  /* negro absoluto */
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -37,9 +43,27 @@ label {
 input {
   padding: 14px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #140505;
   font-size: 15px;
   outline: none;
+}
+
+.volver {
+  background-color: #FFD700;
+  /* dorado */
+  color: #000000;
+  /* texto negro para contraste */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+  background-color: #e6c200;
+  /* dorado más oscuro al pasar el mouse */
 }
 
 input:focus {
@@ -49,7 +73,7 @@ input:focus {
 
 .btn-enviar {
   background-color: #4CAF50;
-  color: white;
+  color: rgb(26, 17, 17);
   padding: 14px;
   border: none;
   border-radius: 10px;
@@ -61,4 +85,294 @@ input:focus {
 
 .btn-enviar:hover {
   background-color: #388E3C;
+}
+
+#vista-contacto {
+  color: #000000;
+  /* negro para todo el texto dentro de la sección */
+}
+
+#vista-contacto h2 {
+  color: #FFD700;
+  /* dorado para el título */
+}
+
+#vista-contacto p {
+  color: #ffffff;
+  /* blanco o cámbialo por negro/dorado según contraste */
+}
+
+.volver {
+  background-color: #FFD700;
+  /* dorado */
+  color: #000000;
+  /* texto negro dentro del botón */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+  background-color: #e6c200;
+  /* dorado más oscuro al pasar el mouse */
+}
+
+/* Texto general dentro de las secciones */
+.vista p {
+  color: #000000;
+  /* negro para contraste */
+  font-size: 16px;
+  text-shadow: 1px 1px 3px #fff;
+  /* opcional, para dar realce */
+}
+
+/* Si quieres que solo cambie en Contacto */
+#vista-contacto p {
+  color: #333333;
+  /* gris oscuro elegante */
+}
+
+/* Si quieres que solo cambie en Agenda */
+#vista-agenda p {
+  color: #000000;
+  /* negro absoluto */
+}
+
+/* Si quieres que solo cambie en Historias */
+#vista-historias p {
+  color: #0f0c01;
+  /* dorado, si quieres resaltar */
+}
+
+/* Sección Contacto */
+#vista-contacto {
+  color: #000000;
+  /* color general del texto */
+}
+
+#vista-contacto h2 {
+  color: #FFD700;
+  /* dorado para el título */
+}
+
+#vista-contacto p {
+  background: rgba(6, 231, 74, 0.418);
+  /* recuadro semitransparente */
+  border: 2px solid #FFD700;
+  /* borde dorado */
+  border-radius: 10px;
+  /* esquinas redondeadas */
+  padding: 6px;
+  /* espacio interno */
+  margin: 10px 0;
+  /* separación entre párrafos */
+  color: #000000;
+  /* texto negro para contraste */
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* sombra para realce */
+}
+
+/* Botón Volver */
+.volver {
+  background-color: #FFD700;
+  /* dorado */
+  color: #000000;
+  /* texto negro dentro del botón */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+  background-color: #e6c200;
+  /* dorado más oscuro al pasar el mouse */
+}
+
+/* Sección Contacto */
+#vista-contacto h2 {
+  color: #FFD700;
+  /* dorado para el título */
+}
+
+#vista-contacto p {
+  background: rgba(9, 124, 86, 0.473);
+  /* recuadro semitransparente */
+  border: 2px solid #FFD700;
+  /* borde dorado */
+  border-radius: 10px;
+  /* esquinas redondeadas */
+  padding: 12px;
+  /* espacio interno */
+  margin: 10px 0;
+  /* separación entre párrafos */
+  color: #000000;
+  /* texto negro para contraste */
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* sombra para realce */
+}
+
+/* Sección Historias */
+#vista-historias h2 {
+  color: #FFD700;
+  /* dorado para el título */
+}
+
+#vista-historias p {
+  background: rgba(10, 153, 98, 0.397);
+  /* recuadro semitransparente */
+  border: 2px solid #FFD700;
+  /* borde dorado */
+  border-radius: 10px;
+  /* esquinas redondeadas */
+  padding: 12px;
+  /* espacio interno */
+  margin: 10px 0;
+  /* separación entre párrafos */
+  color: #000000;
+  /* texto negro para contraste */
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* sombra para realce */
+}
+
+/* Botón Volver */
+.volver {
+  background-color: #FFD700;
+  /* dorado */
+  color: #000000;
+  /* texto negro dentro del botón */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+  background-color: #e6c200;
+  /* dorado más oscuro al pasar el mouse */
+}
+
+/* Recuadros de párrafos en Contacto e Historias */
+#vista-contacto p,
+#vista-historias p {
+  background: rgba(17, 132, 177, 0.521);
+  /* fondo semitransparente */
+  border: 2px solid #FFD700;
+  /* borde dorado */
+  border-radius: 10px;
+  /* esquinas redondeadas */
+  padding: 12px;
+  /* espacio interno */
+  margin: 10px 0 10px 0;
+  /* margen solo arriba/abajo, pegado a la izquierda */
+  color: #000000;
+  /* texto negro para contraste */
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* sombra para realce */
+  max-width: 400px;
+  /* límite de ancho del recuadro */
+  text-align: left;
+  /* texto alineado a la izquierda */
+}
+
+.btn-ia {
+  background-color: #6f42c1;
+  /* morado elegante */
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ia:hover {
+  background-color: #5a32a3;
+  /* tono más oscuro al pasar el mouse */
+}
+
+/* Contenedor principal */
+.contenedor {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Título */
+.contenedor h1 {
+  text-align: center;
+  color: #6f42c1;
+  /* morado elegante */
+  margin-bottom: 20px;
+}
+
+/* Etiqueta */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  background: #fff3cd;
+  /* amarillo suave */
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* Área de texto */
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #6f42c1;
+  border-radius: 8px;
+  resize: none;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #5a32a3;
+  outline: none;
+}
+
+/* Botón enviar */
+.btn {
+  background-color: #6f42c1;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5a32a3;
+}
+
+/* Respuesta simulada */
+#respuesta {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f1f1f1;
+  border-radius: 8px;
+  font-style: italic;
+  color: #555;
 }
