@@ -1,0 +1,85 @@
+ERRORES DETECTADOS:
+.1-Encabezados duplicados y jerarquia
+.Impacto alto:
+PROPUESTA:Mantener un solo h1 para tutulo principal y usar h2 apra cada seccion (cultivo,galeria,historias, contacto,
+formulario).
+
+.2- uso de <div> en lugar de etiquetas semanticas 
+.Impacto medio
+propuesta:reemplazar <div class="grid-botones"> por <nav> o section para mejorar la accesibilidad semantica 
+
+.3- formulario sin validacion minima 
+propuesta: Agregar required en los campos de nombre, correo y telefono para evitar envios vacios 
+
+
+.4- Se encontró código duplicado para la sección "Tipo de cultivo"El: primero no mostraba imágenes y generaba confusión visual.
+Corrección aplicada:
+propuesta: eliminar el bloque duplicado sin imágenes y se mantener  el bloque completo con tarjetas de cultivo (Plátano, Maíz, Café, Frutas, Cultivos mixtos).
+
+Correcciones aplicadas:
+
+FRAGMENTO ORIGINAL:
+<header class="header">
+    <h1>Feria Digital Agropecuaria</h1>
+    <p>Explora cultivos, fotos, historias y contáctanos.</p>
+</header>
+   <section id="vista-cultivo" class="vista">
+    <h2>Tipo de cultivo</h2>
+    <h3>🍌 Plátano</h3>
+</section>
+
+    FRAGMENTO CORREGIDO 
+
+    <header class="header">
+    <h1>Feria Digital Agropecuaria</h1>
+    <p>Explora cultivos, fotos, historias y contáctanos.</p>
+</header>
+    <section id="vista-cultivo" class="vista">
+    <h2>Tipo de cultivo</h2>
+    <div class="cultivo-card">
+        <h3>🍌 Plátano</h3>
+        <p>El plátano es un cultivo esencial...</p>
+    </div>
+</section>
+
+Explicacion: Se mantuvo un unico titulo h1 como titulo principal. de la pagina y se organizron los demas titulos en niveles descendentes(h2) para secciones, h3 para subtutulos, esto mejora la accesibilidad semantica y el seo de la pagina. 
+
+
+
+
+FRAGMENTO ORIGINA:
+
+   <!-- VISTA PRINCIPAL -->
+        <section id="vista-inicio" class="vista activa">
+            <div class="grid-botones">
+                <button class="btn" data-vista="cultivo">Tipo de cultivo</button>
+                <button class="btn" data-vista="galeria">Galería de fotos</button>
+                <button class="btn" data-vista="historias">Historias</button>
+                <button class="btn" data-vista="contacto">Contacto</button>
+                <button class="btn" data-vista="formulario">Formulario</button>
+                <a href="asistenteia.html" class="btn btn-ia">Asistente IA</a>
+            </div>
+        </section>
+
+FRAGMENTO CORREGIDO:
+
+    <main class="contenedor">
+     <nav class="menu-principal">
+    <button class="btn" data-vista="cultivo">Tipo de cultivo</button>
+    <button class="btn" data-vista="galeria">Galería de fotos</button>
+    <button class="btn" data-vista="historias">Historias</button>
+    <button class="btn" data-vista="contacto">Contacto</button>
+    <button class="btn" data-vista="formulario">Formulario</button>
+    <a href="asistenteia.html" class="btn btn-ia">Asistente IA</a>
+</nav>
+Explicacion: se remplazo <div> por <nav> para dar semantica al bloque de navegacion principal.
+
+FRAGMENTO ORIGINAL:
+<input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+
+FRAGMENTO CORREGIDO:
+<input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+explicaion:Se añadio validadion minima (required) para evitar envios vacios.
+
+
+

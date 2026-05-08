@@ -127,55 +127,49 @@
     </header>
 
     <main class="contenedor">
-        <!-- VISTA PRINCIPAL -->
-        <section id="vista-inicio" class="vista activa">
-            <div class="grid-botones">
-                <button class="btn" data-vista="cultivo">Tipo de cultivo</button>
-                <button class="btn" data-vista="galeria">Galería de fotos</button>
-                <button class="btn" data-vista="historias">Historias</button>
-                <button class="btn" data-vista="contacto">Contacto</button>
-                <button class="btn" data-vista="formulario">Formulario</button>
-                <a href="asistenteia.html" class="btn btn-ia">Asistente IA</a>
-            </div>
-        </section>
+     <nav class="menu-principal">
+    <button class="btn" data-vista="cultivo">Tipo de cultivo</button>
+    <button class="btn" data-vista="galeria">Galería de fotos</button>
+    <button class="btn" data-vista="historias">Historias</button>
+    <button class="btn" data-vista="contacto">Contacto</button>
+    <button class="btn" data-vista="formulario">Formulario</button>
+    <a href="asistenteia.html" class="btn btn-ia">Asistente IA</a>
+</nav>
 
-        <!-- VISTA: TIPO DE CULTIVO -->
-        <section id="vista-cultivo" class="vista">
-            <h2>Tipo de cultivo</h2>
+
 
             <div class="cultivo-card">
-                <img src="https://copilot.microsoft.com/th/id/BCO.8e4033b1-935a-4f5a-9c53-0459467b1e59.png"
-                    alt="Plátano">
-                <h3>🍌 Plátano</h3>
-                <p>El plátano es un cultivo esencial en la alimentación y economía rural, con alto rendimiento y gran
+                <h3>🍌PLATANO</h3>
+                <img src="imagenes/platano.png" alt="Plátano">
+                 <p>El plátano es un cultivo esencial en la alimentación y economía rural, con alto rendimiento y gran
                     demanda.</p>
             </div>
 
             <div class="cultivo-card">
-                <img src="https://copilot.microsoft.com/th/id/BCO.bbda2345-f55f-42bd-b7e5-b23715954f74.png" alt="Maíz">
-                <h3>🌽 Maíz</h3>
-                <p>El maíz es un cereal versátil, base de la dieta y clave en la producción agroindustrial y
+                <h3>🌽MAIZ</h3>
+                <img src="imagenes/maiz.png" alt="Maíz">
+     <p>El maíz es un cereal versátil, base de la dieta y clave en la producción agroindustrial y
                     alimentaria.</p>
             </div>
 
             <div class="cultivo-card">
+                 <h3>☕CAFE</h3>
                 <img src="imagenes/cafe.jpg" alt="Café">
-                <h3>☕ Café</h3>
                 <p>El café colombiano es reconocido mundialmente por su calidad y tradición, sustento de miles de
                     familias campesinas.</p>
             </div>
 
             <div class="cultivo-card">
+                <h3>🍓FRUTAS</h3>
                 <img src="imagenes/frutas.jpg" alt="Frutas">
-                <h3>🍓 Frutas</h3>
-                <p>Las frutas aportan diversidad, nutrición y valor económico, siendo parte vital de la agricultura
+                 <p>Las frutas aportan diversidad, nutrición y valor económico, siendo parte vital de la agricultura
                     sostenible.</p>
             </div>
 
             <div class="cultivo-card">
+                <h3>🌱CULTIVOS MIXTOS</h3>
                 <img src="imagenes/cultivos.jpg" alt="Cultivos mixtos">
-                <h3>🌱 Cultivos mixtos</h3>
-                <p>La combinación de diferentes cultivos fortalece la seguridad alimentaria y mejora el aprovechamiento
+                  <p>La combinación de diferentes cultivos fortalece la seguridad alimentaria y mejora el aprovechamiento
                     del suelo.</p>
             </div>
 
@@ -213,7 +207,7 @@
             <form>
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
                 </div>
 
 
