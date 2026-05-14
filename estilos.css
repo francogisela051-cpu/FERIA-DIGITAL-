@@ -375,4 +375,28 @@ textarea:focus {
   border-radius: 8px;
   font-style: italic;
   color: #555;
+}.mensaje.ia h3 {
+  color: #1b5e20;
+  margin: 10px 0 8px;
+  font-size: 1.1rem;
+}
+
+.mensaje.ia p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.mensaje.ia ul,
+.mensaje.ia ol {
+  margin: 10px 0 10px 22px;
+  padding-left: 18px;
+}
+
+.mensaje.ia li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.mensaje.ia strong {
+  color: #2e7d32;
 }
